@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="rating__field">
+      <div class="rating__field--icon">
+        <img src="./images/icon-star.svg" alt="Icon Star">
+      </div>
+      <div class="rating__field--question">
+        <h3>How did we do?</h3>
+      </div>
+      <div class="rating__field--desc">
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+      </div>
+      <div class="rating__field--score">
+        <span class="score">
+          <p class="choice" onclick="changePoint(1)">1</p>
+        </span>
+        <span class="score">
+          <p class="choice" onclick="changePoint(2)">2</p>
+        </span>
+        <span class="score">
+          <p class="choice" onclick="changePoint(3)">3</p>
+        </span>
+        <span class="score">
+          <p class="choice" onclick="changePoint(4)">4</p>
+        </span>
+        <span class="score">
+          <p class="choice" onclick="changePoint(5)">5</p>
+        </span>
+      </div>
+      <button class="rating__field--submit" onclick="openModal()">Submit</button>
+    </div>
+
+    <!-- Thanks state (initially hidden) -->
+    <div class="thanks__field" style="display: none;">
+      <div>
+        <img src="./images/illustration-thank-you.svg" alt="Illustration Thankyou">
+      </div>
+      <div class="thanks__field--selected">
+        <p id="choices"></p>
+      </div>
+      <div class="thanks__field--ty">
+        <h3>Thank you!</h3>
+      </div>
+      <div class="thanks__field--desc">
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+    <span>Coded by <a href="#">qltran</a>.</span>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
